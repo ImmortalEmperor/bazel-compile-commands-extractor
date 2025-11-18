@@ -1109,7 +1109,7 @@ def _get_cpp_command_for_files(compile_action):
             compile_action[pair.key] = pair.value
         else:
             compile_action[pair.key] = ""
-    
+
     if 'PATH' not in compile_action.environmentVariables: # Bazel only adds if --incompatible_strict_action_env is passed--and otherwise inherits.
         compile_action.environmentVariables['PATH'] = os.environ['PATH']
 
